@@ -1,5 +1,4 @@
 import type { Collection } from "tinacms";
-import Author from "./author";
 
 const Tournament: Collection = {
   label: "Tournaments",
