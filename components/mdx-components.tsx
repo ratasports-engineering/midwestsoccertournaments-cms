@@ -6,6 +6,7 @@ import { Prism } from 'tinacms/dist/rich-text/prism';
 import { Video } from './blocks/video';
 import { PageBlocksVideo } from '@/tina/__generated__/types';
 import { Mermaid } from './blocks/mermaid';
+import TournamentGrid from './TournamentGrid';
 
 function getContrastColor(hex: string): string {
   const c = hex.replace('#', '');
@@ -32,6 +33,9 @@ export const components: Components<{
     disclaimer?: TinaMarkdownContent;
   };
   video: PageBlocksVideo;
+  TournamentGrid: {
+    heading?: string;
+  };
 }> = {
   code_block: (props) => {
     if (!props) {
@@ -127,5 +131,8 @@ export const components: Components<{
   mermaid: (props: any) => <Mermaid {...props} />,
   video: (props) => {
     return <Video data={props} />;
+  },
+  TournamentGrid: (props) => {
+    return <TournamentGrid heading={props.heading} />;
   },
 };

@@ -26,6 +26,19 @@ export const Content = ({ data }: { data: PageBlocksContent }) => {
   );
 };
 
+export const tournamentGridBlockSchema: Template = {
+  name: 'TournamentGrid',
+  label: 'Tournament Grid',
+  fields: [
+    {
+      type: 'string',
+      name: 'heading',
+      label: 'Heading',
+      description: 'Custom title above the cards (e.g., Upcoming Fall Games)',
+    },
+  ],
+};
+
 export const contentBlockSchema: Template = {
   name: 'content',
   label: 'Content',
@@ -41,7 +54,7 @@ export const contentBlockSchema: Template = {
       type: 'rich-text',
       label: 'Body',
       name: 'body',
-      templates: [scriptCopyBlockSchema],
+      templates: [scriptCopyBlockSchema, tournamentGridBlockSchema],
     },
   ],
 };
