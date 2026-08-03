@@ -1,0 +1,43 @@
+
+> .@0.0.1 dev /app
+> tinacms dev -c "next dev --turbopack"
+
+🦙 TinaCMS Dev Server is initializing...
+[2K[1GIndexing local files ⠋[2K[1GIndexing local files ⠙
+│
+○  ✅ 🦙 TinaCMS Dev Server is active: ─────────────────────────────────────╮
+│                                                                          │
+│  🦙 TinaCMS URLs                                                         │
+│     CMS:                <your-dev-server-url>/admin/index.html           │
+│     API playground:     <your-dev-server-url>/admin/index.html#/graphql  │
+│     API url:            http://localhost:4001/graphql                    │
+│                                                                          │
+│  🤖 Auto-generated files                                                 │
+│     GraphQL Client:     tina/__generated__/client.ts                     │
+│     Typescript Types:   tina/__generated__/types.ts                      │
+│                                                                          │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+Running web application with command: next dev --turbopack
+ ⚠ Port 3000 is in use, using available port 3001 instead.
+   ▲ Next.js 15.3.8 (Turbopack)
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.0.2:3001
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1765ms
+ ○ Compiling /tournaments/[slug] ...
+ ✓ Compiled /tournaments/[slug] in 8.6s
+Unable to find record content/tournaments/summer-cup.mdx
+
+GraphQL request:3:3
+2 |     query tournament($relativePath: String!) {
+3 |   tournament(relativePath: $relativePath) {
+  |   ^
+4 |     ... on Document {
+ HEAD /tournaments/summer-cup 404 in 10908ms
+ HEAD /tournaments/Kickout-Cancer-Color-3v3 200 in 1158ms
+ GET /tournaments/Kickout-Cancer-Color-3v3 200 in 220ms
+ ✓ Compiled in 224ms
+ ✓ Compiled in 77ms
